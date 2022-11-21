@@ -128,5 +128,4 @@ gen
 credentials.json*
 prod-env.yaml*
 mongodb/
-build/
 dev/
