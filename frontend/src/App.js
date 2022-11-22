@@ -14,13 +14,13 @@ function App() {
                 <Container>
                     <LinkContainer to="/">
                         <Navbar.Brand>
-                            <Link to="/">TheStore</Link>
+                            TheStore
                         </Navbar.Brand>
                     </LinkContainer>
                 </Container>
               </Navbar>
           </header>
-            <main>
+            <main className="py-4">
                 <Container>
                     <Routes>
                         <Route path="/" element={<HomeScreen />} />
