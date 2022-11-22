@@ -25,14 +25,11 @@ main {
   color: #000000;
 }
 
-header a {
-  font-size: x-large;
-  color: #ffffff;
+.navbar-brand {
   font-weight: bold;
-  text-decoration: none;
 }
 
-header a:hover {
+.navbar-brand:hover {
   color: #f0c040;
 }
 
@@ -62,4 +59,8 @@ header a:hover {
 
 .rating span:nth-child(6) {
   padding-left: 5px;
+}
+
+.img-large {
+  max-width: 100%;
 }

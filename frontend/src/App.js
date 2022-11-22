@@ -20,7 +20,7 @@ function App() {
                 </Container>
               </Navbar>
           </header>
-            <main className="py-4">
+            <main className="my-3">
                 <Container>
                     <Routes>
                         <Route path="/" element={<HomeScreen />} />

@@ -34,7 +34,7 @@ const data = {
             price: 64,
             countInStock: 19,
             brand: 'Ronny',
-            rating: 3.6,
+            rating: 2.5,
             numReviews: 12,
             description: 'Nice shirt for men.'
 
@@ -45,9 +45,9 @@ const data = {
             category: 'Pants',
             image: '/images/pants2.jpg',
             price: 140,
-            countInStock: 4,
+            countInStock: 0,
             brand: 'Champ',
-            rating: 4.1,
+            rating: 1.5,
             numReviews: 16,
             description: 'Jeans pants for men.'
 
@@ -60,7 +60,7 @@ const data = {
             price: 71,
             countInStock: 22,
             brand: 'Lewis',
-            rating: 4.8,
+            rating: 1.0,
             numReviews: 22,
             description: 'Comfortable shirt for men.'
 
@@ -71,9 +71,9 @@ const data = {
             category: 'Pants',
             image: '/images/pants3.jpg',
             price: 108,
-            countInStock: 18,
+            countInStock: 0,
             brand: 'Mythos',
-            rating: 3.7,
+            rating: 5.0,
             numReviews: 11,
             description: 'White pants for men.'
 
