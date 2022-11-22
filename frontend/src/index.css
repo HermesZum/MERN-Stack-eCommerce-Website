@@ -7,8 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.site-container {
+  min-height: 100vh;
+}
+
 main {
-  padding: 1rem;
+  flex: 1;
 }
 
 code {
@@ -16,16 +20,15 @@ code {
     monospace;
 }
 
-header {
-  background-color: #404040;
-  padding: 1rem;
-}
-
 header a {
   font-size: x-large;
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
+}
+
+header a:hover {
+  color: #dddddd;
 }
 
 .products {
