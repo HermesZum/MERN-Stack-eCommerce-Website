@@ -1,6 +1,7 @@
 const data = {
     products: [
         {
+            _id: '1',
             name: 'Champ Slim Shirt',
             slug: 'champion-slim-shirt',
             category: 'Shirts',
@@ -14,6 +15,7 @@ const data = {
 
         },
         {
+            _id: '2',
             name: 'Lava Slim Pants',
             slug: 'lava-slim-shirt',
             category: 'Pants',
@@ -27,6 +29,7 @@ const data = {
 
         },
         {
+            _id: '3',
             name: 'Ronny Nice Shirt',
             slug: 'ronny-nice-shirt',
             category: 'Shirt',
@@ -40,6 +43,7 @@ const data = {
 
         },
         {
+            _id: '4',
             name: 'Ruth Jeans Pants',
             slug: 'ruth-jeans-pants',
             category: 'Pants',
@@ -53,6 +57,7 @@ const data = {
 
         },
         {
+            _id: '5',
             name: 'Lewis Comfort Shirt',
             slug: 'lewis-comfort-shirt',
             category: 'Shirt',
@@ -66,6 +71,7 @@ const data = {
 
         },
         {
+            _id: '6',
             name: 'Mythos White Pants',
             slug: 'mythos-white-pants',
             category: 'Pants',
