@@ -64,3 +64,8 @@ main {
 .img-large {
   max-width: 100%;
 }
+
+.fa-cart-shopping {
+  color: aliceblue;
+  margin-right: 2px;
+}
