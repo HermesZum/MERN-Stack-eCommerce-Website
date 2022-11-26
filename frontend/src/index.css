@@ -16,6 +16,10 @@ code {
   min-height: 100vh;
 }
 
+.small-container {
+  max-width: 600px;
+}
+
 main {
   flex: 1;
 }
