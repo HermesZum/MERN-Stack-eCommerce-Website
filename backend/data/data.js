@@ -1,7 +1,22 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+    users: [
+        {
+            username: 'Admin',
+            email: 'admin$example.com',
+            password: bcrypt.hashSync('Zum-120588'),
+            isAdmin: true,
+        },
+        {
+            username: 'Customer',
+            email: 'customer$example.com',
+            password: bcrypt.hashSync('Zum-120588'),
+            isAdmin: false,
+        },
+    ],
     products: [
         {
-            _id: '1',
             name: 'Champ Slim Shirt',
             slug: 'champion-slim-shirt',
             category: 'Shirts',
@@ -15,7 +30,6 @@ const data = {
 
         },
         {
-            _id: '2',
             name: 'Lava Slim Pants',
             slug: 'lava-slim-shirt',
             category: 'Pants',
@@ -29,7 +43,6 @@ const data = {
 
         },
         {
-            _id: '3',
             name: 'Ronny Nice Shirt',
             slug: 'ronny-nice-shirt',
             category: 'Shirt',
@@ -43,7 +56,6 @@ const data = {
 
         },
         {
-            _id: '4',
             name: 'Ruth Jeans Pants',
             slug: 'ruth-jeans-pants',
             category: 'Pants',
@@ -57,7 +69,6 @@ const data = {
 
         },
         {
-            _id: '5',
             name: 'Lewis Comfort Shirt',
             slug: 'lewis-comfort-shirt',
             category: 'Shirt',
@@ -71,7 +82,6 @@ const data = {
 
         },
         {
-            _id: '6',
             name: 'Mythos White Pants',
             slug: 'mythos-white-pants',
             category: 'Pants',
