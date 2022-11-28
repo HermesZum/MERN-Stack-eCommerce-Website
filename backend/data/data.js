@@ -3,17 +3,11 @@ import bcrypt from 'bcryptjs';
 const data = {
     users: [
         {
-            username: 'Admin',
-            email: 'admin$example.com',
+            name: 'Admin',
+            email: 'admin@example.com',
             password: bcrypt.hashSync('Zum-120588'),
             isAdmin: true,
-        },
-        {
-            username: 'Customer',
-            email: 'customer$example.com',
-            password: bcrypt.hashSync('Zum-120588'),
-            isAdmin: false,
-        },
+        }
     ],
     products: [
         {
@@ -27,7 +21,6 @@ const data = {
             rating: 4.5,
             numReviews: 8,
             description: 'Shirt for men'
-
         },
         {
             name: 'Lava Slim Pants',
@@ -40,7 +33,6 @@ const data = {
             rating: 3.5,
             numReviews: 12,
             description: 'Pants for men.'
-
         },
         {
             name: 'Ronny Nice Shirt',
@@ -53,7 +45,6 @@ const data = {
             rating: 2.5,
             numReviews: 12,
             description: 'Nice shirt for men.'
-
         },
         {
             name: 'Ruth Jeans Pants',
@@ -66,7 +57,6 @@ const data = {
             rating: 1.5,
             numReviews: 16,
             description: 'Jeans pants for men.'
-
         },
         {
             name: 'Lewis Comfort Shirt',
@@ -79,7 +69,6 @@ const data = {
             rating: 1.0,
             numReviews: 22,
             description: 'Comfortable shirt for men.'
-
         },
         {
             name: 'Mythos White Pants',
@@ -92,7 +81,6 @@ const data = {
             rating: 5.0,
             numReviews: 11,
             description: 'White pants for men.'
-
         },
     ],
 }
