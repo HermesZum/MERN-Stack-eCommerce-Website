@@ -2,14 +2,15 @@ import './App.css';
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import HomeScreen from "./screens/HomeScreen";
-import ProductScreen from "./screens/ProductScreen";
 import { Badge, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useContext } from "react";
 import { Store } from "./Store";
+import HomeScreen from "./screens/HomeScreen";
+import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import SigninScreen from "./screens/SigninScreen";
+import ShippingScreen from "./screens/ShippingScreen";
 
 function App() {
     const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -18,6 +19,7 @@ function App() {
     const signoutHandler = () => {
         ctxDispatch({ type: 'USER_SIGNOUT' });
         localStorage.removeItem('userInfo');
+        localStorage.removeItem('shippingAddress');
     }
 
     return (
@@ -81,6 +83,7 @@ function App() {
                             <Route path="/signin" element={ <SigninScreen/> }/>
                             <Route path="/product/:slug" element={ <ProductScreen/> }/>
                             <Route path="/cart" element={ <CartScreen/> }/>
+                            <Route path="/shipping" element={ <ShippingScreen/> }/>
                         </Routes>
                     </Container>
                 </main>
