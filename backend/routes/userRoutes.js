@@ -14,7 +14,7 @@ userRouter.post(
             if (bcrypt.compareSync(req.body.password, user.password)) {
                 res.send({
                     _id: user._id,
-                    name: user.name,
+                    username: user.username,
                     email: user.email,
                     isAdmin: user.isAdmin,
                     token: generateToken(user),
@@ -26,5 +26,26 @@ userRouter.post(
         res.status(401).send({ message: 'Invalid email or password' });
     })
 );
+
+userRouter.post(
+    '/signup',
+    expressAsyncHandler(async (req, res) => {
+        const newUser = new User({
+            username: req.body.username,
+            email: req.body.email,
+            password: bcrypt.hashSync(req.body.password, 9),
+        });
+        const user = await newUser.save();
+        res.send({
+            _id: user._id,
+            username: user.username,
+            email: user.email,
+            isAdmin: user.isAdmin,
+            token: generateToken(user),
+
+        });
+    })
+);
+
 
 export default userRouter;
