@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Store } from "../Store";
 
-function PaymentMethodScreen(props) {
+function PaymentMethodScreen() {
     const navigate = useNavigate();
     const { state, dispatch: ctxDispatch } = useContext(Store);
     const { cart: { shippingAddress, paymentMethod }, } = state;
