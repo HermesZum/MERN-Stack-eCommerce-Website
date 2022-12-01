@@ -9,7 +9,6 @@ import { Store } from "../Store";
 import CheckoutSteps from "../components/CheckoutSteps";
 import LoadingBox from "../components/LoadingBox";
 
-
 const reducer = (state, action) => {
     switch (action.type) {
         case 'CREATE_REQUEST':
@@ -21,14 +20,13 @@ const reducer = (state, action) => {
         default:
             return state;
     }
-}
+};
 
 function PlaceOrderScreen() {
     const navigate = useNavigate();
 
     const [ { loading }, dispatch ] = useReducer(reducer, {
         loading: false,
-        error: '',
     });
 
     const { state, dispatch: ctxDispatch } = useContext(Store);
@@ -39,7 +37,7 @@ function PlaceOrderScreen() {
         cart.cartItems.reduce((a, c) => a + c.quantity * c.price, 0)
     );
     cart.shippingPrice = cart.itemsPrice > 100 ? round2(0) : round2(10);
-    cart.taxPrice = round2(0.23 * cart.itemsPrice);
+    cart.taxPrice = round2(0.15 * cart.itemsPrice);
     cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
 
     const placeOrderHandler = async () => {
@@ -47,7 +45,7 @@ function PlaceOrderScreen() {
             dispatch({ type: 'CREATE_REQUEST' });
 
             const { data } = await axios.post(
-                'api/orders',
+                '/api/orders',
                 {
                     orderItems: cart.cartItems,
                     shippingAddress: cart.shippingAddress,
@@ -66,7 +64,7 @@ function PlaceOrderScreen() {
             ctxDispatch({ type: 'CART_CLEAR' });
             dispatch({ type: 'CREATE_SUCCESS' });
             localStorage.removeItem('cartItems');
-            navigate(`/orders/${ data.order._id }`);
+            navigate(`/order/${ data.order._id }`);
         }
         catch (err) {
             dispatch({ type: 'CREATE_FAIL' });
@@ -79,7 +77,6 @@ function PlaceOrderScreen() {
             navigate('/payment');
         }
     }, [ cart, navigate ]);
-
 
     return (
         <div>
