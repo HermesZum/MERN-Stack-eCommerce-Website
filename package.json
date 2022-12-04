@@ -1,0 +1,13 @@
+{
+  "name": "mern-stack-ecommerce-website",
+  "version": "1.0.0",
+  "description": "Complete eCommerce website in full-stack MERN.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "start": "node backend/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clemente Nogueira",
+  "license": "IMT"
+}

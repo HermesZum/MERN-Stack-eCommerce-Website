@@ -3,7 +3,7 @@ import { useEffect, useContext, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { getError } from "../utils";
-import { Button } from "react-bootstrap";
+import Button from "react-bootstrap/esm/Button";
 import { Store } from "../Store";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
